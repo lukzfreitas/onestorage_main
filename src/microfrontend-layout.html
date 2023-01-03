@@ -1,0 +1,26 @@
+<single-spa-router>
+  <main style="overflow-x: hidden">
+    <nav>
+      <application name="@tecno/nav"></application>
+    </nav>
+    <div class="row">
+      <div class="col-sm-2">
+        <application name="@tecno/drawer"></application>
+      </div>
+      <div class="col-sm-10">
+        <route default>
+          <application name="@tecno/login"></application>
+        </route>
+        <route path="client" >
+          <application name="@tecno/records" props="client"></application>
+        </route>
+        <route path="bank" params="bank">
+          <application name="@tecno/records" props="bank"></application>
+        </route>
+        <route path="company">
+          <application name="@tecno/company"></application>
+        </route>
+      </div>
+    </div>
+  </main>
+</single-spa-router>
